@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Plataforma Enade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Prepara Enade</div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="casos.html">Casos Práticos</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    </header>
+    
+    <section class="container">
+        <h2>Ranking de Pontuação</h2>
+        <p>Acompanhe sua posição e veja quem são os melhores no estudo para o Enade.</p>
+        
+        <div class="ranking-tabela">
+            <h3>Ranking Geral</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ana Souza</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pedro Lima</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mariana Alves</td>
+                        <td>870</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ranking-tabela">
+            <h3>Ranking da Sala</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lucas Ferreira</td>
+                        <td>880</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Carla Mendes</td>
+                        <td>860</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ricardo Santos</td>
+                        <td>830</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Plataforma Enade - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav ul li a");
+            let currentPage = window.location.pathname.split("/").pop();
+    
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Plataforma Enade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Prepara Enade</div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="casos.html">Casos Práticos</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    </header>
+    
+    <section class="container">
+        <h2>Acesse sua conta</h2>
+        <form action="dashboard.html" method="post" class="login-form">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Plataforma Enade - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav ul li a");
+            let currentPage = window.location.pathname.split("/").pop();
+    
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

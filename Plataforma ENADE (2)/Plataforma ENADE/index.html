@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Enade - Ética e Acessibilidade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Prepara Enade</div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="casos.html">Casos Práticos</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    </header>
+    
+    <section id="home" class="container">
+        <div class="intro">
+            <h2>Bem-vindo à Prepara Enade</h2>
+            <p>Prepare-se para o Enade com simulados personalizados, resolução comentada e desafios interativos que testam seus conhecimentos em Acessibilidade.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h3>🎯 Simulados Personalizados</h3>
+                <p>Teste seus conhecimentos com questões reais do Enade.</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Ranking e Pontuação</h3>
+                <p>Compare seu desempenho com outros estudantes.</p>
+            </div>
+            <div class="feature">
+                <h3>💡 Casos Práticos</h3>
+                <p>Aprenda com situações reais aplicadas à sua área.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Plataforma Enade - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav ul li a");
+            let currentPage = window.location.pathname.split("/").pop();
+    
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>    
+</body>
+</html>
