@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulado ENADE - Acessibilidade</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .simulado-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .questao {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+
+    .questao h3 {
+      font-size: 1.2rem;
+    }
+
+    .alternativas label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .explicacao {
+      display: none;
+      margin-top: 10px;
+      background: #f0f8ff;
+      padding: 10px;
+      border-left: 4px solid #0073e6;
+      border-radius: 5px;
+    }
+
+    .btn-verificar {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-verificar:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Prepara Enade</div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="casos.html">Casos Práticos</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+    </header>
+
+  <main class="simulado-container">
+    <h2>Responda as questões abaixo:</h2>
+
+    <!-- Questão 1 -->
+    <div class="questao" id="q1">
+      <h3>1. O princípio da acessibilidade dispõe que na construção de espaços, na formatação de produtos e no planejamento de serviços deve-se considerar que as pessoas com deficiência (PCD) são usuárias legítimas, dignas e independentes. Avalie as afirmações a seguir:</h3>
+      <div class="alternativas">
+        <label><input type="radio" name="q1" onclick="mostrarExplicacao('exp1')"> A) III, apenas.</label>
+        <label><input type="radio" name="q1" onclick="mostrarExplicacao('exp1')"> B) I e IV, apenas.</label>
+        <label><input type="radio" name="q1" onclick="mostrarExplicacao('exp1')"> C) II e III, apenas.</label>
+        <label><input type="radio" name="q1" onclick="mostrarExplicacao('exp1')"> D) I, II e IV, apenas.</label>
+        <label><input type="radio" name="q1" onclick="mostrarExplicacao('exp1')"> E) I, II, III e IV.</label>
+      </div>
+      <div class="explicacao" id="exp1">
+        <strong>Explicação:</strong> Todas as afirmações estão corretas, pois abordam medidas adequadas de acessibilidade, como adaptação de vias públicas, padronização de calçadas, auxílio de terceiros e sinalização sonora e em braille.
+      </div>
+    </div>
+
+    <!-- Questão 2 -->
+    <div class="questao" id="q2">
+      <h3>2. O Decreto nº 5.626/2005 dispõe sobre a Língua Brasileira de Sinais (Libras) e considera a pessoa surda como aquela que, por ter perda auditiva, compreende e interage com o mundo por meio de experiências visuais. Qual a importância desse decreto para a educação inclusiva?</h3>
+      <div class="alternativas">
+        <label><input type="radio" name="q2" onclick="mostrarExplicacao('exp2')"> A) Estabelece a obrigatoriedade do ensino de Libras em todas as escolas.</label>
+        <label><input type="radio" name="q2" onclick="mostrarExplicacao('exp2')"> B) Reconhece a Libras como meio legal de comunicação e expressão, promovendo a inclusão de pessoas surdas no sistema educacional.</label>
+        <label><input type="radio" name="q2" onclick="mostrarExplicacao('exp2')"> C) Determina que todas as aulas sejam ministradas exclusivamente em Libras.</label>
+        <label><input type="radio" name="q2" onclick="mostrarExplicacao('exp2')"> D) Restringe o uso da Libras apenas a ambientes escolares especializados.</label>
+      </div>
+      <div class="explicacao" id="exp2">
+        <strong>Explicação:</strong> O decreto reconhece a Libras como meio legal de comunicação e expressão, promovendo a inclusão de pessoas surdas no sistema educacional e garantindo seus direitos linguísticos.
+      </div>
+    </div>
+
+    <!-- Questões 3 a 10 podem ser adicionadas seguindo a mesma estrutura -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Plataforma Enade - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function mostrarExplicacao(id) {
+      const explicacoes = document.querySelectorAll('.explicacao');
+      explicacoes.forEach(e => e.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
