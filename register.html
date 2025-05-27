@@ -78,10 +78,10 @@
             }
 
             try {
-                const resposta = await fetch('/api/auth/register', {
-                    method: "POST",
+                const resposta = await fetch('https://fse-1-y6h3.onrender.com/api/auth/register', {
+                    method: 'POST',
                     headers: {
-                        "Content-Type": "application/json"
+                    'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
                         name: nome,
