@@ -60,12 +60,16 @@
     const categoriaSelect = document.getElementById("categoria");
     const bancaSelect = document.getElementById("banca");
     const anoSelect = document.getElementById("ano");
+    const BASE_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:3000"
+  : "https://fse-1-y6h3.onrender.com";
+
 
     let questoesCarregadas = [];
 
     async function carregarQuestoes() {
       try {
-        const res = await fetch("http://localhost:3000/api/questoes");
+        const res = await fetch(`${BASE_URL}/api/questoes`);
         const dados = await res.json();
         questoesCarregadas = dados;
 
