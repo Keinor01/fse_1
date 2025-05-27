@@ -10,7 +10,7 @@ const router = express.Router();
 const resetTokens = {};
 
 // Cadastro
-router.post('/registro', (req, res) => {
+router.post('/register', (req, res) => {
   const { name, email, password, apelido, pais, foto } = req.body;
 
   if (!name || !email || !password) {

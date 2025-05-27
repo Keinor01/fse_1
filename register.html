@@ -96,14 +96,14 @@
 
                 if (resposta.ok) {
                     // Salva o usuário no localStorage sem 'pais' e 'foto'
-                    localStorage.setItem("user", JSON.stringify(resultado.usuario));
+                   localStorage.setItem("user", JSON.stringify({ id: resultado.id }));
                     window.location.href = "login.html";
                 } else {
                     mensagemErro.textContent = "Erro: " + (resultado.erro || resultado.message || "Não foi possível concluir o cadastro.");
                     mensagemErro.style.display = "block";
                 }
             } catch (erro) {
-                mensagemErro.textContent = "Erro ao conectar com o servidor.";
+                mensagemErro.textContent = "Erro ao conectar com o servidor. Detalhes: " + erro.message;
                 mensagemErro.style.display = "block";
                 console.error(erro);
             }
